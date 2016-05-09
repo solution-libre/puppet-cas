@@ -1,0 +1,22 @@
+{
+  "name": "echoes-jasig",
+  "version": "0.1.0",
+  "author": "Echoes Technologies",
+  "summary": "Manage Jasig via puppet.",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/echoes-tech/puppet-jasig",
+  "project_page": "https://github.com/echoes-tech/puppet-jasig",
+  "issues_url": "https://github.com/echoes-tech/puppet-jasig/issues",
+  "description": "Jasig is a SSO supporting CAS protocol.",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian"
+    }
+],
+  "tags": [
+    "Debian",
+  ],
+  "dependencies": [
+  
+  ]
+}
