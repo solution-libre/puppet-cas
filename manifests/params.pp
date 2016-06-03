@@ -2,7 +2,8 @@
 #
 # This is a container class with default parameters for jasig classes.
 class jasig::params {
-  $service_directory = '/etc/cas/services'
+  $server_name          = 'http://localhost'
+  $service_directory    = '/etc/cas/services'
   
 
   ## LDAP properties
@@ -29,5 +30,6 @@ class jasig::params {
   
   ## LDAP Authentication
   $ldap_domain          = undef
+  $ldap_search_filter   = undef
 
 }

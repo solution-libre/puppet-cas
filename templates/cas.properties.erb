@@ -17,8 +17,8 @@
 # under the License.
 #
 
-server.name=http://localhost:8080
-server.prefix=${server.name}/cas
+server.name=<%=@server_name%>
+server.prefix=${server.name}/cas-overlay-1.0
 
 # security configuration based on IP address to access the /status and /statistics pages
 # cas.securityContext.adminpages.ip=127\.0\.0\.1
@@ -770,7 +770,9 @@ ldap.pool.idleTime=600
 #========================================
 # Authentication
 #========================================
-ldap.authn.searchFilter=cn={user}
+# Exemple :
+# ldap.authn.searchFilter=sAMAccountName={user}
+ldap.authn.searchFilter=<%=@ldap_search_filter%>
 
 # Ldap domain used to resolve dn
 ldap.domain=<%=@ldap_domain%>
