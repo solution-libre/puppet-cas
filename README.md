@@ -37,6 +37,10 @@ jasig::service { 'Jenkins':
 
 #### Parameters
 
+##### `server_name`
+
+Url of the server. Valid option: string. Default value: "http://localhost/"
+
 ##### `service_directory`
 
 Directory where the services are configured. Valid option: string. Default value: "/etc/cas/services"
@@ -76,6 +80,10 @@ LDAP manager password. Valid option: string. Default value: undef
 ##### `ldap_domain`
 
 LDAP domain. Valid option: string. Default value: undef
+
+##### `ldap_search_filter`
+
+LDAP search filter. Valid option: string. Default value: undef
 
 ### Defines
 
