@@ -30,10 +30,10 @@ class { 'cas': }
 
 ```puppet
 cas::service { 'Jenkins':
-  serviceId    => '^https://myserver.+jenkins.+',
-  id           => '100',
-  $enabled     => true,
-  $sso_enabled => true,
+  serviceId   => '^https://myserver.+jenkins.+',
+  id          => '100',
+  enabled     => true,
+  sso_enabled => true,
 },
 ```
 
