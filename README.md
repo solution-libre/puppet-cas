@@ -1,4 +1,4 @@
-# puppet-cas
+# cas
 
 #### Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-This module installs and configures [CAS](https://wiki.jasig.org/display/CAS/Home).
+This module configures [CAS](https://wiki.jasig.org/display/CAS/Home).
 
 ## Setup
 
