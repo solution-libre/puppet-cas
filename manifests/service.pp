@@ -11,10 +11,6 @@
 #    are located. The definition of the url pattern must be done carefully 
 #    because it can open security breaches.
 #
-# [*name*]
-#   Required name (255 characters or less). Must include valid characters 
-#    allowed by the file system.
-#
 # [*id*]
 #   Required unique identifier.
 #
@@ -45,7 +41,6 @@
 #
 define cas::service (
   $serviceId        = undef,
-  $name             = undef,
   $id               = undef,
   $enabled          = true,
   $sso_enabled      = true,
@@ -53,8 +48,8 @@ define cas::service (
 
   include cas::params
 
-  file { "${name}":
-      path    => "${$cas::params::service_directory}/${name}",
+  file { "${title}.json":
+      path    => "${$cas::params::service_directory}/${title}.json",
       ensure  => 'present',
       mode    => '0644',
       content => template('cas/service.erb'),

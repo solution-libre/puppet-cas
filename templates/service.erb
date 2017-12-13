@@ -1,12 +1,11 @@
 {
   "@class" : "org.jasig.cas.services.RegexRegisteredService",
-  "serviceId" : "<%=@serviceId%>",
-  "name" : "<%=@name%>",
-  "id" : <%=@id%>,
+  "serviceId" : "<%= @serviceId %>",
+  "name" : "<%= @title %>",
+  "id" : <%= @id %>,
   "accessStrategy" : {
     "@class" : "org.jasig.cas.services.DefaultRegisteredServiceAccessStrategy",
-    "enabled" : <%=@enabled%>,
-    "ssoEnabled" : <%=@sso_enabled%>
+    "enabled" : <%= @enabled %>,
+    "ssoEnabled" : <%= @sso_enabled %>
   }
 }
-

@@ -31,7 +31,6 @@ class { 'cas': }
 ```puppet
 cas::service { 'Jenkins':
   serviceId    => '^https://myserver.+jenkins.+',
-  name         => 'jenkins.json',
   id           => '100',
   $enabled     => true,
   $sso_enabled => true,
@@ -113,10 +112,6 @@ The following parameters are available in the `::cas::service` define:
 ##### `serviceId`
 
 Required Ant pattern or regular expression describing a logical service. A logical service defines one or more URLs where a service or services are located. The definition of the url pattern must be done carefully because it can open security breaches. Valid options: string. Default value: undef
-
-##### `name`
-
-Required name (255 characters or less). Must include valid characters allowed by the file system. Valid option: string. Default value: undef
 
 ##### `id`
 
