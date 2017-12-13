@@ -1,11 +1,10 @@
-# == Class: jasig::params
+# == Class: cas::params
 #
-# This is a container class with default parameters for jasig classes.
-class jasig::params {
+# This is a container class with default parameters for CAS classes.
+class cas::params {
   $server_name          = 'http://localhost'
   $service_directory    = '/etc/cas/services'
   
-
   ## LDAP properties
   $ldap_url             = undef
   
@@ -31,5 +30,4 @@ class jasig::params {
   ## LDAP Authentication
   $ldap_domain          = undef
   $ldap_search_filter   = undef
-
 }

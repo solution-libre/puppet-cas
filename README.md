@@ -1,26 +1,41 @@
-# puppet-jasig
+# puppet-cas
 
-Manage Jasig via puppet.
+#### Table of Contents
+
+1. [Description](#description)
+2. [Setup - The basics of getting started with CAS](#setup)
+    * [Beginning with CAS](#beginning-with-cas)
+3. [Usage - Configuration options and additional functionality](#usage)
+    * [Add a service](#add-a-service)
+4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+5. [Limitations - OS compatibility, etc.](#limitations)
+6. [Development - Guide for contributing to the module](#development)
+7. [Contributors](#contributors)
+
+## Description
+
+This module installs and configures [CAS](https://wiki.jasig.org/display/CAS/Home).
+
+## Setup
+
+### Beginning with CAS
+
+```puppet
+class { 'cas': }
+```
 
 ## Usage
 
-```puppet
-    class { 'jasig': }
-```
-
 ### Add a service
 
-Adding a service:
-
 ```puppet
-jasig::service { 'Jenkins':
-    serviceId    => '^https://myserver.+jenkins.+',
-    name         => 'jenkins.json',
-    id           => '100',
-    $enabled     => true,
-    $sso_enabled => true,
-  },
-
+cas::service { 'Jenkins':
+  serviceId    => '^https://myserver.+jenkins.+',
+  name         => 'jenkins.json',
+  id           => '100',
+  $enabled     => true,
+  $sso_enabled => true,
+},
 ```
 
 ## Reference
@@ -29,11 +44,11 @@ jasig::service { 'Jenkins':
 
 #### Public classes
 
-* jasig: main class.
+* cas: Main class, includes all other classes.
 
 #### Private classes
 
-* jasig::params: Sets parameter defaults per operating system.
+* cas::params: Sets parameter defaults per operating system.
 
 #### Parameters
 
@@ -89,11 +104,11 @@ LDAP search filter. Valid option: string. Default value: undef
 
 #### Public Defines
 
- *jasig::service: Adds a Jasig service.
+* cas::service: Adds a CAS service.
 
 #### Parameters
 
-The following parameters are available in the `::jasig::service` define:
+The following parameters are available in the `::cas::service` define:
 
 ##### `serviceId`
 
@@ -114,13 +129,16 @@ Flag to toggle whether the entry is active; a disabled entry produces behavior e
 ##### `sso_enabled`
 Set to false to force users to authenticate to the service regardless of protocol flags (e.g. renew=true). This flag provides some support for centralized application of security policy. Valid option: boolean. Default value: true
 
-##Development
+## Limitations
 
-[Echoes Technologies](https://www.echoes.fr) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
+Debian family OSes are officially supported. Tested and built on Debian.
 
-[Fork this module on GitHub](https://github.com/echoes-tech/puppet-jasig/fork)
+## Development
+
+[Solution Libre](https://www.solution-libre.fr) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
+
+[Fork this module on GitHub](https://github.com/solution-libre/puppet-cas/fork)
 
 ## Contributors
 
-The list of contributors can be found at: https://github.com/echoes-tech/puppet-jasig/graphs/contributors
-
+The list of contributors can be found at: https://github.com/solution-libre/puppet-cas/graphs/contributors

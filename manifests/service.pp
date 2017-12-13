@@ -1,4 +1,4 @@
-# == Define Resource Type: jasig::service
+# == Define Resource Type: cas::service
 #
 # This type will setup a service configuration file inside
 #  the appropriate directory to allow the SSO for an app.
@@ -31,7 +31,7 @@
 #
 #  Adding a service:
 #
-#  jasig::service { 'Jenkins':
+#  cas::service { 'Jenkins':
 #    serviceId    => '^https://ksf.echoes.fr.+jenkins.+',
 #    name         => 'jenkins.json',
 #    id           => '100',
@@ -43,7 +43,7 @@
 #
 # Thomas Saquet <thomas@echoes.fr>
 #
-define jasig::service (
+define cas::service (
   $serviceId        = undef,
   $name             = undef,
   $id               = undef,
@@ -51,13 +51,12 @@ define jasig::service (
   $sso_enabled      = true,
 ) {
 
-  include jasig::params
+  include cas::params
 
   file { "${name}":
-      path    => "${$jasig::params::service_directory}/${name}",
+      path    => "${$cas::params::service_directory}/${name}",
       ensure  => 'present',
       mode    => '0644',
-      content => template('jasig/service.erb'),
+      content => template('cas/service.erb'),
   }
 }
-
