@@ -1,5 +1,10 @@
 # cas
 
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/soli/cas.svg)](https://forge.puppetlabs.com/soli/cas)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/soli/cas.svg)](https://forge.puppetlabs.com/soli/cas)
+[![Puppet Forge Score](http://img.shields.io/puppetforge/f/soli/cas.svg)](https://forge.puppetlabs.com/soli/cas)
+[![Build Status](https://travis-ci.org/solution-libre/puppet-cas.svg?branch=master)](https://travis-ci.org/solution-libre/puppet-cas)
+
 #### Table of Contents
 
 1. [Description](#description)
