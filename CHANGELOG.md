@@ -1,3 +1,8 @@
+## 2017-12-30 - Release 1.0.0
+### Summary
+
+This release benefited from the changes introduced by PDK 1.3.0 (`pdk convert`)
+
 ## 2017-12-13 - Release 0.2.0
 ### Summary
 
