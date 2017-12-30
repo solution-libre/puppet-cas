@@ -30,7 +30,7 @@ class { 'cas': }
 
 ```puppet
 cas::service { 'Jenkins':
-  serviceId   => '^https://myserver.+jenkins.+',
+  service_id  => '^https://myserver.+jenkins.+',
   id          => '100',
   enabled     => true,
   sso_enabled => true,
@@ -63,31 +63,31 @@ Directory where the services are configured. Valid option: string. Default value
 
 URL of the LDAP server. Valid option: string. Default value: undef
 
-##### `ldap_useStartTLS`
+##### `ldap_use_start_tls`
 
 Whether TLS is used. Valid option: boolean. Default value: false
 
-##### `ldap_useSSL`
+##### `ldap_use_ssl`
 
 Whether SSL is used. Valid option: boolean. Default value: false
 
-##### `ldap_trustedCert`
+##### `ldap_trusted_cert`
 
 Whether trusted certificate is used. Valid option: boolean. Default value: false
 
-##### `ldap_rootDn`
+##### `ldap_root_dn`
 
 LDAP root DN. Valid option: string. Default value: undef
 
-##### `ldap_baseDn`
+##### `ldap_base_dn`
 
 LDAP base DN. Valid option: string. Default value: undef
 
-##### `ldap_managerDn` 
+##### `ldap_manager_dn`
 
 LDAP manager DN. Valid option: string. Default value: undef
 
-##### `ldap_managerPassword` 
+##### `ldap_manager_password`
 
 LDAP manager password. Valid option: string. Default value: undef
 
@@ -109,7 +109,7 @@ LDAP search filter. Valid option: string. Default value: undef
 
 The following parameters are available in the `::cas::service` define:
 
-##### `serviceId`
+##### `service_id`
 
 Required Ant pattern or regular expression describing a logical service. A logical service defines one or more URLs where a service or services are located. The definition of the url pattern must be done carefully because it can open security breaches. Valid options: string. Default value: undef
 

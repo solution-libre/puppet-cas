@@ -2,32 +2,32 @@
 #
 # This is a container class with default parameters for CAS classes.
 class cas::params {
-  $server_name          = 'http://localhost'
-  $service_directory    = '/etc/cas/services'
-  
+  $server_name           = 'http://localhost'
+  $service_directory     = '/etc/cas/services'
+
   ## LDAP properties
-  $ldap_url             = undef
-  
-  $ldap_useStartTLS     = false
-  $ldap_useSSL          = false
-  $ldap_trustedCert     = false
-  
+  $ldap_url              = undef
+
+  $ldap_use_start_tls    = false
+  $ldap_use_ssl          = false
+  $ldap_trusted_cert     = false
+
   # Directory root DN
-  $ldap_rootDn          = undef
+  $ldap_root_dn          = undef
 
   # Base DN of users to be authenticated
-  $ldap_baseDn          = undef
+  $ldap_base_dn          = undef
 
   # LDAP connection timeout in milliseconds
-  $ldap_connectTimeout  = '3000'
+  $ldap_connect_timeout  = '3000'
 
   # Manager credential DN
-  $ldap_managerDn       = undef
+  $ldap_manager_dn       = undef
 
   # Manager credential password
-  $ldap_managerPassword = undef
-  
+  $ldap_manager_password = undef
+
   ## LDAP Authentication
-  $ldap_domain          = undef
-  $ldap_search_filter   = undef
+  $ldap_domain           = undef
+  $ldap_search_filter    = undef
 }

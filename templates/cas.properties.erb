@@ -17,7 +17,7 @@
 # under the License.
 #
 
-server.name=<%=@server_name%>
+server.name=<%= @server_name %>
 server.prefix=${server.name}/cas-overlay-1.0
 
 # security configuration based on IP address to access the /status and /statistics pages
@@ -367,7 +367,7 @@ st.timeToKillInSeconds=3600
 # JSON Service Registry
 #
 # Directory location where JSON service files may be found.
-service.registry.config.location=<%=@service_directory%>
+service.registry.config.location=<%= @service_directory %>
 
 ##
 # Service Registry Periodic Reloading Scheduler
@@ -719,27 +719,27 @@ service.registry.config.location=<%=@service_directory%>
 #========================================
 # LDAP General properties
 #========================================
-ldap.url=<%=@ldap_url%>
+ldap.url=<%= @ldap_url %>
 
 # Start TLS for SSL connections
-ldap.useStartTLS=<%=@ldap_useStartTLS%>
-ldap.useSSL=<%=@ldap_useSSL%>
-ldap.trustedCert=<%=@ldap_trustedCert%>
+ldap.useStartTLS=<%= @ldap_use_start_tls %>
+ldap.useSSL=<%= @ldap_use_ssl %>
+ldap.trustedCert=<%= @ldap_trusted_cert %>
 
 # Directory root DN
-ldap.rootDn=<%=@ldap_rootDn%>
+ldap.rootDn=<%= @ldap_root_dn %>
 
 # Base DN of users to be authenticated
-ldap.baseDn=<%=@ldap_baseDn%>
+ldap.baseDn=<%= @ldap_base_dn %>
 
 # LDAP connection timeout in milliseconds
-ldap.connectTimeout=<%=@ldap_connectTimeout%>
+ldap.connectTimeout=<%= @ldap_connect_timeout %>
 
 # Manager credential DN
-ldap.managerDn=<%=@ldap_managerDn%>
+ldap.managerDn=<%= @ldap_manager_dn %>
 
 # Manager credential password
-ldap.managerPassword=<%=@ldap_managerPassword%>
+ldap.managerPassword=<%= @ldap_manager_password %>
 
 #========================================
 # LDAP connection pool configuration
@@ -772,10 +772,10 @@ ldap.pool.idleTime=600
 #========================================
 # Exemple :
 # ldap.authn.searchFilter=sAMAccountName={user}
-ldap.authn.searchFilter=<%=@ldap_search_filter%>
+ldap.authn.searchFilter=<%= @ldap_search_filter %>
 
 # Ldap domain used to resolve dn
-ldap.domain=<%=@ldap_domain%>
+ldap.domain=<%= @ldap_domain %>
 
 # Should LDAP Password Policy be enabled?
 ldap.usePpolicy=false

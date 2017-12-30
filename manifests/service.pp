@@ -5,7 +5,7 @@
 #
 # === Parameters
 #
-# [*serviceId*]
+# [*service_id*]
 #   Required Ant pattern or regular expression describing a logical service. 
 #    A logical service defines one or more URLs where a service or services 
 #    are located. The definition of the url pattern must be done carefully 
@@ -28,7 +28,7 @@
 #  Adding a service:
 #
 #  cas::service { 'Jenkins':
-#    serviceId    => '^https://ksf.echoes.fr.+jenkins.+',
+#    service_id   => '^https://ksf.echoes.fr.+jenkins.+',
 #    name         => 'jenkins.json',
 #    id           => '100',
 #    $enabled     => true,
@@ -40,17 +40,17 @@
 # Thomas Saquet <thomas@echoes.fr>
 #
 define cas::service (
-  $serviceId        = undef,
-  $id               = undef,
-  $enabled          = true,
-  $sso_enabled      = true,
+  $service_id  = undef,
+  $id          = undef,
+  $enabled     = true,
+  $sso_enabled = true,
 ) {
 
   include cas::params
 
   file { "${title}.json":
-      path    => "${$cas::params::service_directory}/${title}.json",
       ensure  => 'present',
+      path    => "${$cas::params::service_directory}/${title}.json",
       mode    => '0644',
       content => template('cas/service.erb'),
   }
