@@ -1,6 +1,6 @@
 {
   "name": "soli-cas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Solution Libre SAS",
   "summary": "Puppet module to manage CAS",
   "license": "Apache-2.0",
